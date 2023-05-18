@@ -1,0 +1,389 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://uno.app/vault.schema.json",
+  "title": "Vault",
+  "description": "Uno Vault",
+  "type": "object",
+  "properties": {
+    "idCardValue": {
+      "type": "string"
+    },
+    "vaultSchemaMajor": {
+      "type": "integer"
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "email": {
+      "type": ["string", "null"],
+      "default": null,
+      "format": "idn-email"
+    },
+    "validatedPhoneNumber": {
+      "type": ["string", "null"],
+      "default": null
+    },
+    "manualItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "url": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "username": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "password": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "intendedPassword": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "otpSeed": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "notes": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "relatedItems": {
+            "type": "array",
+            "items": {
+              "$ref": "/schemas/relatedItem"
+            }
+          },
+          "ssoProvider": {
+            "type": ["array", "null"],
+            "items": {
+              "$ref": "/schemas/ssoProvider"
+            }
+          }
+        },
+        "required": ["id"]
+      }
+    },
+    "vault": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string"
+          },
+          "username": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "password": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "intendedPassword": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "intendedOTPSeed": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "otpSeed": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "notes": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "relatedItems": {
+            "type": "array",
+            "items": {
+              "$ref": "/schemas/relatedItem"
+            }
+          },
+          "ssoProvider": {
+            "type": ["array", "null"],
+            "items": {
+              "$ref": "/schemas/ssoProvider"
+            }
+          }
+        },
+        "required": ["id", "name"]
+      }
+    },
+    "privateKeys": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string"
+          },
+          "password": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "walletAddresses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "notes": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "url": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": ["name", "key", "id"]
+      }
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "seed": {
+            "type": "string"
+          },
+          "ownerPublicSigningKey": {
+            "type": "string"
+          }
+        },
+        "required": ["ownerPublicSigningKey", "seed", "id"]
+      }
+    },
+    "contacts": {
+      "type": "array",
+      "items": {
+        "$ref": "/schemas/contact"
+      }
+    },
+    "confidants": {
+      "type": "array",
+      "items": {
+        "$ref": "/schemas/contact"
+      }
+    },
+    "friends": {
+      "type": "array",
+      "items": {
+        "$ref": "/schemas/contact"
+      }
+    },
+    "oldPasswords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "creditCards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "type": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "name": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "holder": {
+            "type": "string"
+          },
+          "number": {
+            "type": "string"
+          },
+          "expiration": {
+            "type": "string",
+            "pattern": "^[0,1][0-9]\/[0-9]{2}$"
+          },
+          "cvv": {
+            "type": ["string", "null"],
+            "default": null,
+            "minLength": 3,
+            "maxLength": 4
+          },
+          "addressUUID": {
+            "type": ["string", "null"],
+            "default": null,
+            "format": "uuid"
+          }
+        },
+        "required": ["id", "holder", "number", "expiration"]
+      }
+    },
+    "addresses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "line1": {
+            "type": "string"
+          },
+          "line2": {
+            "type": ["string", "null"],
+            "default": null
+          },
+          "city": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "zip": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          }
+        },
+        "required": ["id", "line1", "city", "state", "zip", "country"]
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "title": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "required": ["id", "title", "notes"]
+      }
+    }
+  },
+  "required": [
+    "idCardValue",
+    "vaultSchemaMajor",
+    "uuid"
+  ],
+  "$defs": {
+    "relatedItem": {
+      "$id": "/schemas/relatedItem",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "password": {
+          "type": ["string", "null"],
+          "default": null
+        },
+        "otpSeed": {
+          "type": ["string", "null"],
+          "default": null
+        }
+      }
+    },
+    "ssoProvider": {
+      "$id": "/schemas/ssoProvider",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        },
+        "default": {
+          "type": "boolean"
+        }
+      },
+      "required": ["username", "provider", "default"]
+    },
+    "contact": {
+      "$id": "/schemas/contact",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "properties": {
+        "givenName": { "type": "string" },
+        "fullName": { "type": "string" },
+        "initials": { "type": "string" },
+        "phoneNumber": { "type": "string" },
+        "state": { "enum": ["denied", "error", "pending", "protecting", "recovery", "removing", "owner", "readonly", null] },
+        "id": { 
+          "type": "string",
+          "format": "uuid"
+        },
+        "share": {
+          "type": ["string", "null"],
+          "default": null
+        },
+        "signingKey": {
+          "type": ["string", "null"],
+          "default": null
+        },
+        "encryptionKey": {
+          "type": ["string", "null"],
+          "default": null
+        },
+        "oldShares": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "session": {
+          "type": ["object", "null"],
+          "default": null,
+          "properties": {
+            "seed": {
+              "type": "string"
+            },
+          }
+        },
+      },
+      "required": ["givenName", "fullName", "initials", "phoneNumber", "id"]
+    }
+  }
+}
