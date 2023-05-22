@@ -1,13 +1,16 @@
 {
-  "name": "vault_schema",
+  "name": "@withuno/vault-schema",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "jest",
     "generate": "node src/generate.js"
   },
-  "author": "",
+  "files": [
+    "schemas/**/*"
+  ],
+  "author": "https://uno.app",
   "license": "ISC",
   "dependencies": {
     "json-schema-to-typescript": "^13.0.1"

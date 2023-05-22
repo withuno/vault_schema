@@ -1,3 +1,4 @@
+//XXX: this is not ready yet. Chris
 const generator = require('json-schema-to-typescript');
 
 (function() {
