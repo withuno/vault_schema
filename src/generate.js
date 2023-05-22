@@ -5,7 +5,7 @@ const generator = require('json-schema-to-typescript');
   const CURRENT_SCHEMA = 7;
 
   console.log("generating schema...");
-  generator.compileFromFile("schema/7/vault.json")
+  generator.compileFromFile("schemas/7/vault.json")
   .then(function(s) {
     console.log(s);
   });

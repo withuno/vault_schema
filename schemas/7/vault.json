@@ -63,15 +63,11 @@
           },
           "relatedItems": {
             "type": "array",
-            "items": {
-              "$ref": "/schemas/7/relatedItem.json"
-            }
+            "items": {}
           },
           "ssoProvider": {
             "type": ["array", "null"],
-            "items": {
-              "$ref": "/schemas/7/ssoProvider.json"
-            }
+            "items": {}
           }
         },
         "required": ["id"]
@@ -115,15 +111,11 @@
           },
           "relatedItems": {
             "type": "array",
-            "items": {
-              "$ref": "/schemas/7/relatedItem.json"
-            }
+            "items": {}
           },
           "ssoProvider": {
             "type": ["array", "null"],
-            "items": {
-              "$ref": "/schemas/7/ssoProvider.json"
-            }
+            "items": {}
           }
         },
         "required": ["id", "name"]
@@ -187,21 +179,15 @@
     },
     "contacts": {
       "type": "array",
-      "items": {
-        "$ref": "/schemas/7/contact.json"
-      }
+      "items": {}
     },
     "confidants": {
       "type": "array",
-      "items": {
-        "$ref": "/schemas/7/contact.json"
-      }
+      "items": {}
     },
     "friends": {
       "type": "array",
-      "items": {
-        "$ref": "/schemas/7/contact.json"
-      }
+      "items": {}
     },
     "oldPasswords": {
       "type": "array",
