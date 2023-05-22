@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "generate": "node src/generate.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hyperjump/json-schema": "^1.5.0"
+    "json-schema-to-typescript": "^13.0.1"
   }
 }

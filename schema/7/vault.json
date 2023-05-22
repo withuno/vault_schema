@@ -379,9 +379,9 @@
           "properties": {
             "seed": {
               "type": "string"
-            },
+            }
           }
-        },
+        }
       },
       "required": ["givenName", "fullName", "initials", "phoneNumber", "id"]
     }
