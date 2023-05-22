@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://uno.app/vault.schema.json",
+  "$id": "https://uno.app/schemas/7/vault.json",
   "title": "Vault",
   "description": "Uno Vault",
   "type": "object",
@@ -64,13 +64,13 @@
           "relatedItems": {
             "type": "array",
             "items": {
-              "$ref": "/schemas/relatedItem"
+              "$ref": "/schemas/7/relatedItem.json"
             }
           },
           "ssoProvider": {
             "type": ["array", "null"],
             "items": {
-              "$ref": "/schemas/ssoProvider"
+              "$ref": "/schemas/7/ssoProvider.json"
             }
           }
         },
@@ -116,13 +116,13 @@
           "relatedItems": {
             "type": "array",
             "items": {
-              "$ref": "/schemas/relatedItem"
+              "$ref": "/schemas/7/relatedItem.json"
             }
           },
           "ssoProvider": {
             "type": ["array", "null"],
             "items": {
-              "$ref": "/schemas/ssoProvider"
+              "$ref": "/schemas/7/ssoProvider.json"
             }
           }
         },
@@ -188,19 +188,19 @@
     "contacts": {
       "type": "array",
       "items": {
-        "$ref": "/schemas/contact"
+        "$ref": "/schemas/7/contact.json"
       }
     },
     "confidants": {
       "type": "array",
       "items": {
-        "$ref": "/schemas/contact"
+        "$ref": "/schemas/7/contact.json"
       }
     },
     "friends": {
       "type": "array",
       "items": {
-        "$ref": "/schemas/contact"
+        "$ref": "/schemas/7/contact.json"
       }
     },
     "oldPasswords": {
