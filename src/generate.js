@@ -10,6 +10,6 @@ const fs = require('fs');
   console.log("generating schema...");
   generator.compileFromFile("schemas/7/vault.json")
   .then(function(s) {
-    fs.writeFileSync('vault.d.ts', s);
+    fs.writeFileSync('types/vault.d.ts', s);
   });
 })();

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "private": true,
+  "types": "types/vault.d.ts",
   "scripts": {
     "test": "jest",
     "generate": "node src/generate.js"
