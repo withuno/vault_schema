@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://uno.app/schemas/7/vault.json",
+  "$id": "@withuno/vault-schema/schemas/7/vault.json",
   "title": "Vault",
   "description": "Uno Vault",
   "type": "object",
