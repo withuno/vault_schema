@@ -15,7 +15,7 @@ let package = Package(
             path: ".",
             exclude: ["src/*"],
             resources: [
-                .process("schemas/*")
+                .copy("schemas")
             ]
         )
     ]
