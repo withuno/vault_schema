@@ -12,6 +12,7 @@ let package = Package(
     targets: [
         .target(
             name: "VaultSchema",
+            path: "Sources",
             resources: [
                 .copy("schemas")
             ]
