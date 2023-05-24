@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "VaultSchema",
     platforms: [
-        .iOS(.v15), .macOS(.v12)
+        .iOS(.v15), .macOS(.v12_0)
     ],
     products: [
         .library(
