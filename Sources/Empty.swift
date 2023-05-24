@@ -1,1 +1,1 @@
-public struct Empty {}
+public final class Empty {}
