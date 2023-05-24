@@ -13,7 +13,7 @@ let package = Package(
         .target(
             name: "VaultSchema",
             path: ".",
-            exclude: ["src/*"],
+            exclude: ["src/generate.js", "package.json", "package-lock.json"],
             resources: [
                 .copy("schemas")
             ]
