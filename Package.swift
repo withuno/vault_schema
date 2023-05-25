@@ -12,9 +12,9 @@ let package = Package(
     targets: [
         .target(
             name: "VaultSchema",
-            path: "Sources",
+            path: ".",
             resources: [
-                .process("vault.json")
+                .copy("schemas")
             ]
         )
     ]
