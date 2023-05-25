@@ -1,9 +1,10 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "@withuno/vault-schema/schemas/7/vault.json",
+  "$id": "https://uno.app/schemas/7/vault.json",
   "title": "Vault",
   "description": "Uno Vault",
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "idCardValue": {
       "type": "string"
@@ -27,50 +28,7 @@
     "manualItems": {
       "type": "array",
       "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "name": {
-            "type": ["string", "null"],
-            "default": null
-          },
-          "url": {
-            "type": ["string", "null"],
-            "default": null
-          },
-          "username": {
-            "type": ["string", "null"],
-            "default": null
-          },
-          "password": {
-            "type": ["string", "null"],
-            "default": null
-          },
-          "intendedPassword": {
-            "type": ["string", "null"],
-            "default": null
-          },
-          "otpSeed": {
-            "type": ["string", "null"],
-            "default": null
-          },
-          "notes": {
-            "type": ["string", "null"],
-            "default": null
-          },
-          "relatedItems": {
-            "type": "array",
-            "items": {}
-          },
-          "ssoProvider": {
-            "type": ["array", "null"],
-            "items": {}
-          }
-        },
-        "required": ["id"]
+        "$ref": "#/$defs/manualItem"
       }
     },
     "vault": {
@@ -287,17 +245,82 @@
         },
         "required": ["id", "title", "notes"]
       }
+    },
+    "refreshTokens": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "clientId": {
+            "type": "string"
+          },
+          "refreshToken": {
+            "type": "string"
+          }
+        },
+        "required": ["id", "clientId", "refreshToken"]
+      }
     }
   },
   "required": [
     "idCardValue",
     "vaultSchemaMajor",
-    "uuid"
+    "uuid",
+    "email",
+    "validatedPhoneNumber"
   ],
   "$defs": {
+    "manualItem": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "name": {
+          "type": ["string", "null"],
+          "default": null
+        },
+        "url": {
+          "type": ["string", "null"],
+          "default": null
+        },
+        "username": {
+          "type": ["string", "null"],
+          "default": null
+        },
+        "password": {
+          "type": ["string", "null"],
+          "default": null
+        },
+        "intendedPassword": {
+          "type": ["string", "null"],
+          "default": null
+        },
+        "otpSeed": {
+          "type": ["string", "null"],
+          "default": null
+        },
+        "notes": {
+          "type": ["string", "null"],
+          "default": null
+        },
+        "relatedItems": {
+          "type": "array",
+          "items": {}
+        },
+        "ssoProvider": {
+          "type": ["array", "null"],
+          "items": {}
+        }
+      },
+      "required": ["id"]
+    },
     "relatedItem": {
-      "$id": "/schemas/relatedItem",
-      "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
         "password": {
@@ -311,8 +334,6 @@
       }
     },
     "ssoProvider": {
-      "$id": "/schemas/ssoProvider",
-      "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
         "username": {
@@ -328,8 +349,6 @@
       "required": ["username", "provider", "default"]
     },
     "contact": {
-      "$id": "/schemas/contact",
-      "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "object",
       "properties": {
         "givenName": { "type": "string" },
