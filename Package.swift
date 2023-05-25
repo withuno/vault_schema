@@ -14,7 +14,7 @@ let package = Package(
             name: "VaultSchema",
             path: "Sources",
             resources: [
-                .copy("schemas")
+                .process("schemas/7/vault.json")
             ]
         )
     ]
