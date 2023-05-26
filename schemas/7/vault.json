@@ -96,7 +96,11 @@
   "required": [
     "idCardValue",
     "vaultSchemaMajor",
-    "uuid"
+    "uuid",
+    "contacts",
+    "confidants",
+    "oldPasswords",
+    "vault"
   ],
   "$defs": {
     "contact": {
