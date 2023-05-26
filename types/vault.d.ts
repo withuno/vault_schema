@@ -79,14 +79,14 @@ export interface Contact {
   fullName: string;
   initials: string;
   phoneNumber: string;
-  state: "denied" | "error" | "pending" | "protecting" | "recovery" | "removing" | "owner" | "readonly";
+  state?: "denied" | "error" | "pending" | "protecting" | "recovery" | "removing" | "owner" | "readonly";
   id: string;
   share?: string;
   signingKey?: string;
   encryptionKey?: string;
   oldShares?: string[];
   session?: {
-    seed?: string;
+    seed: string;
   };
 }
 export interface CreditCard {

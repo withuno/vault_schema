@@ -137,10 +137,11 @@
             "seed": {
               "type": "string"
             }
-          }
+          },
+          "required": ["seed"]
         }
       },
-      "required": ["givenName", "state", "fullName", "initials", "phoneNumber", "id"]
+      "required": ["givenName", "oldshares", "fullName", "initials", "phoneNumber", "id"]
     },
     "refreshToken": {
       "type": "object",
