@@ -12,86 +12,109 @@ export interface Vault {
   idCardValue: string;
   vaultSchemaMajor: number;
   uuid: string;
-  email: string | null;
-  validatedPhoneNumber: string | null;
+  email?: string;
+  validatedPhoneNumber?: string;
   manualItems?: ManualItem[];
-  vault?: {
-    id: string;
-    name: string;
-    username?: string | null;
-    password?: string | null;
-    intendedPassword?: string | null;
-    intendedOTPSeed?: string | null;
-    otpSeed?: string | null;
-    notes?: string | null;
-    relatedItems?: unknown[];
-    ssoProvider?: unknown[] | null;
-    [k: string]: unknown;
-  }[];
-  privateKeys?: {
-    name: string;
-    key: string;
-    password?: string | null;
-    walletAddresses?: string[];
-    notes?: string | null;
-    url?: string | null;
-    id: string;
-    [k: string]: unknown;
-  }[];
-  groups?: {
-    id: string;
-    seed: string;
-    ownerPublicSigningKey: string;
-    [k: string]: unknown;
-  }[];
-  contacts?: unknown[];
-  confidants?: unknown[];
-  friends?: unknown[];
+  vault?: Vault1[];
+  privateKeys?: PrivateKey[];
+  groups?: Group[];
+  contacts?: Contact[];
+  confidants?: Contact[];
+  friends?: Contact[];
   oldPasswords?: string[];
-  creditCards?: {
-    id: string;
-    type?: string | null;
-    name?: string | null;
-    holder: string;
-    number: string;
-    expiration: string;
-    cvv?: string | null;
-    addressUUID?: string | null;
-    [k: string]: unknown;
-  }[];
-  addresses?: {
-    id: string;
-    line1: string;
-    line2?: string | null;
-    city: string;
-    state: string;
-    zip: string;
-    country: string;
-    [k: string]: unknown;
-  }[];
-  notes?: {
-    id: string;
-    title: string;
-    notes: string;
-    [k: string]: unknown;
-  }[];
-  refreshTokens?: {
-    id: string;
-    clientId: string;
-    refreshToken: string;
-    [k: string]: unknown;
-  }[];
+  creditCards?: CreditCard[];
+  addresses?: Address[];
+  notes?: Note[];
+  refreshTokens?: RefreshToken[];
 }
 export interface ManualItem {
   id: string;
-  name?: string | null;
-  url?: string | null;
-  username?: string | null;
-  password?: string | null;
-  intendedPassword?: string | null;
-  otpSeed?: string | null;
-  notes?: string | null;
-  relatedItems?: unknown[];
-  ssoProvider?: unknown[] | null;
-  [k: string]: unknown;
+  name?: string;
+  url?: string;
+  username?: string;
+  password?: string;
+  intendedPassword?: string;
+  otpSeed?: string;
+  notes?: string;
+  ssoProvider?: unknown[];
+  relatedItems?: RelatedItem[];
+}
+export interface RelatedItem {
+  password?: string;
+  otp?: string;
+}
+export interface Vault1 {
+  id: string;
+  name: string;
+  username?: string;
+  password?: string;
+  intendedPassword?: string;
+  intendedOTPSeed?: string;
+  otpSeed?: string;
+  notes?: string;
+  relatedItems?: RelatedItem[];
+  ssoProvider?: SsoProvider[];
+}
+export interface SsoProvider {
+  default: "boolean";
+  provider: "string";
+  username: "string";
+}
+export interface PrivateKey {
+  name: string;
+  key: string;
+  password?: string;
+  walletAddresses?: string[];
+  notes?: string;
+  url?: string;
+  id: string;
+}
+export interface Group {
+  id: string;
+  seed: string;
+  ownerPublicSigningKey: string;
+}
+export interface Contact {
+  givenName: string;
+  fullName: string;
+  initials: string;
+  phoneNumber: string;
+  state: "denied" | "error" | "pending" | "protecting" | "recovery" | "removing" | "owner" | "readonly";
+  id: string;
+  share?: string;
+  signingKey?: string;
+  encryptionKey?: string;
+  oldShares?: string[];
+  session?: {
+    seed?: string;
+  };
+}
+export interface CreditCard {
+  id: string;
+  type?: string;
+  name?: string;
+  holder: string;
+  number: string;
+  expiration: string;
+  cvv?: string;
+  addressUUID?: string;
+}
+export interface Address {
+  id: string;
+  line1: string;
+  line2?: string;
+  city: string;
+  state: string;
+  zip: string;
+  country: string;
+}
+export interface Note {
+  id: string;
+  title: string;
+  notes: string;
+}
+export interface RefreshToken {
+  id: string;
+  clientId: string;
+  refreshToken: string;
 }
