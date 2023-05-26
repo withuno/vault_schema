@@ -84,7 +84,7 @@ export interface Contact {
   share?: string;
   signingKey?: string;
   encryptionKey?: string;
-  oldShares?: string[];
+  oldShares: string[];
   session?: {
     seed: string;
   };
