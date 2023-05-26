@@ -15,7 +15,7 @@ export interface Vault {
   email?: string;
   validatedPhoneNumber?: string;
   manualItems?: ManualItem[];
-  vault?: Vault1[];
+  vault?: VaultItem[];
   privateKeys?: PrivateKey[];
   groups?: Group[];
   contacts?: Contact[];
@@ -43,7 +43,7 @@ export interface RelatedItem {
   password?: string;
   otp?: string;
 }
-export interface Vault1 {
+export interface VaultItem {
   id: string;
   name: string;
   username?: string;

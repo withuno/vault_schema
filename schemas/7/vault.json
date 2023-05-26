@@ -32,7 +32,7 @@
     "vault": {
       "type": "array",
       "items": {
-        "$ref": "#/$defs/vault"
+        "$ref": "#/$defs/vaultItem"
       }
     },
     "privateKeys": {
@@ -316,7 +316,7 @@
       },
       "required": ["default", "provider", "username"]
     },
-    "vault": {
+    "vaultItem": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
