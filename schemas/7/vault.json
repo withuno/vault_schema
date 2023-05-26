@@ -23,6 +23,9 @@
     "validatedPhoneNumber": {
       "type": "string"
     },
+    "name": {
+      "type": "string"
+    },
     "manualItems": {
       "type": "array",
       "items": {
@@ -94,6 +97,22 @@
       "items": {
         "$ref": "#/$defs/refreshToken"
       }
+    },
+    "personas": {
+      "type": "array",
+      "items": {}
+    },
+    "travel": {
+      "type": "array",
+      "items": {}
+    },
+    "wifi": {
+      "type": "array",
+      "items": {}
+    },
+    "wiringDetails": {
+      "type": "array",
+      "items": {}
     }
   },
   "required": [
@@ -301,7 +320,7 @@
         "password": {
           "type": "string"
         },
-        "otp": {
+        "otpSeed": {
           "type": "string"
         }
       }
@@ -392,7 +411,7 @@
         "ssoProvider": {
           "type": "array",
           "items": {
-
+            "$ref": "#/$defs/ssoProvider"
           }
         },
         "relatedItems": {
