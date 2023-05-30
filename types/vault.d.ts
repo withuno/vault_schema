@@ -10,7 +10,7 @@
  */
 export interface Vault {
   idCardValue: string;
-  vaultSchemaMajor: "integer";
+  vaultSchemaMajor: number;
   uuid: string;
   email?: string;
   validatedPhoneNumber?: string;
@@ -27,10 +27,10 @@ export interface Vault {
   addresses?: Address[];
   notes?: Note[];
   refreshTokens?: RefreshToken[];
-  personas?: "array";
-  travel?: "array";
-  wifi?: "array";
-  wiringDetails?: "array";
+  personas?: unknown[];
+  travel?: unknown[];
+  wifi?: unknown[];
+  wiringDetails?: unknown[];
 }
 export interface ManualItem {
   id: string;

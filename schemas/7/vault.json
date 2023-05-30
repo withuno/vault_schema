@@ -7,7 +7,7 @@
   "additionalProperties": false,
   "properties": {
     "idCardValue": { "type": "string" },
-    "vaultSchemaMajor": "integer",
+    "vaultSchemaMajor": { "type": "integer" },
     "uuid": {
       "type": "string",
       "format": "uuid"
@@ -88,10 +88,10 @@
         "$ref": "#/$defs/refreshToken"
       }
     },
-    "personas": "array",
-    "travel": "array",
-    "wifi": "array",
-    "wiringDetails": "array"
+    "personas": { "type": "array" },
+    "travel": { "type": "array" },
+    "wifi": { "type": "array" },
+    "wiringDetails": { "type": "array" }
   },
   "required": [
     "idCardValue",
