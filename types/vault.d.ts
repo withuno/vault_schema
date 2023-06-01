@@ -41,7 +41,7 @@ export interface ManualItem {
   username?: string;
   password?: string;
   intendedPassword?: string;
-  otpSeed?: string;
+  otpSeed?: string | null;
   notes?: string;
   ssoProvider?: SsoProvider[];
   relatedItems?: RelatedItem[];

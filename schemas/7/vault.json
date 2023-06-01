@@ -301,7 +301,7 @@
         "username": { "type": "string" },
         "password": { "type": "string" },
         "intendedPassword": { "type": "string" },
-        "otpSeed": { "type": "string" },
+        "otpSeed": { "type": ["string", "null"] },
         "notes": { "type": "string" },
         "ssoProvider": {
           "type": "array",
