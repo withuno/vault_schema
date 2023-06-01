@@ -11,6 +11,7 @@
 export interface Vault {
   idCardValue: string;
   vaultSchemaMajor: number;
+  vaultSchemaMinor?: number;
   uuid: string;
   email?: string;
   validatedPhoneNumber?: string;
@@ -34,6 +35,7 @@ export interface Vault {
 }
 export interface ManualItem {
   id: string;
+  matching_hosts?: string[];
   name?: string;
   url?: string;
   username?: string;

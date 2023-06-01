@@ -8,6 +8,7 @@
   "properties": {
     "idCardValue": { "type": "string" },
     "vaultSchemaMajor": { "type": "integer" },
+    "vaultSchemaMinor": { "type": "integer" },
     "uuid": {
       "type": "string",
       "format": "uuid"
@@ -294,6 +295,7 @@
           "type": "string",
           "format": "uuid"
         },
+        "matching_hosts": { "type": "array", "items": { "type": "string" } },
         "name": { "type": "string" },
         "url": { "type": "string" },
         "username": { "type": "string" },
