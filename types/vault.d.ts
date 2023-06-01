@@ -34,6 +34,7 @@ export interface Vault {
 }
 export interface ManualItem {
   id: string;
+  matching_hosts?: string[];
   name?: string;
   url?: string;
   username?: string;
