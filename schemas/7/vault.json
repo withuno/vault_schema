@@ -8,6 +8,7 @@
   "properties": {
     "idCardValue": { "type": "string" },
     "vaultSchemaMajor": { "type": "integer" },
+    "vaultSchemaMinor": { "type": "integer" },
     "uuid": {
       "type": "string",
       "format": "uuid"
