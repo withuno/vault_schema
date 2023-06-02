@@ -6,7 +6,8 @@
   "types": "types/vault.d.ts",
   "scripts": {
     "test": "jest",
-    "generate": "node src/generate.js"
+    "generate": "node src/generate.js",
+    "validate": "node src/validate.js"
   },
   "files": [
     "schemas/**/*"
@@ -14,6 +15,7 @@
   "author": "https://uno.app",
   "license": "ISC",
   "dependencies": {
+    "ajv": "^8.12.0",
     "json-schema-to-typescript": "^13.0.1"
   }
 }
