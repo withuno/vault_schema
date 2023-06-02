@@ -1,0 +1,78 @@
+{
+	"vaultSchemaMinor": 0,
+	"vaultSchemaMajor": 7,
+	"uuid": "05831292-5cbe-4d03-9860-dd36d852e63e",
+	"email": "chris+61@uno.app",
+	"vault": [],
+	"manualItems": [
+		{
+			"name": "asdasda",
+			"url": "gngmememhijbokakblbhgfhagjdjcfjo",
+			"username": "asdasd",
+			"password": "asdasd",
+			"notes": "",
+			"id": "3de1b8a7-a4d2-48b3-8dd4-a9f8bbe2e0be",
+			"relatedItems": [],
+			"ssoProvider": [],
+			"matching_hosts": [
+				"gngmememhijbokakblbhgfhagjdjcfjo"
+			]
+		},
+		{
+			"name": "dqdqdqdqdqd",
+			"url": "gngmememhijbokakblbhgfhagjdjcfjo",
+			"username": "qdqdqdqdqd",
+			"password": "qdqdqdqdqdqd",
+			"otpSeed": null,
+			"notes": "",
+			"id": "fa58f8e4-26e3-4980-9b39-652929e0a765",
+			"relatedItems": [],
+			"ssoProvider": [],
+			"matching_hosts": [
+				"gngmememhijbokakblbhgfhagjdjcfjo"
+			]
+		},
+		{
+			"name": "qdqdqdqdqdqdqd",
+			"url": "gngmememhijbokakblbhgfhagjdjcfjo",
+			"username": "qdqdqdqdqdq",
+			"password": "qdqdqdqd",
+			"otpSeed": null,
+			"notes": "",
+			"id": "141326cb-0c61-4f48-ab61-4afc889c2ce1",
+			"relatedItems": [],
+			"ssoProvider": [],
+			"matching_hosts": [
+				"gngmememhijbokakblbhgfhagjdjcfjo"
+			]
+		}
+	],
+	"contacts": [],
+	"confidants": [],
+	"oldPasswords": [],
+	"privateKeys": [
+		{
+			"key": "title",
+			"password": "password",
+			"walletAddresses": [
+				"walletaddress111",
+				"123123123"
+			],
+			"name": "key",
+			"notes": "",
+			"url": "",
+			"id": "5c0726d2-7353-48d7-a6b1-72139000e379"
+		},
+		{
+			"key": "asd",
+			"password": "asd",
+			"walletAddresses": [
+				"asdasd"
+			],
+			"name": "asd1111",
+			"notes": "",
+			"url": "url",
+			"id": "63e307b3-acab-4e3e-a11d-b57e9ae72a4d"
+		}
+	]
+}
