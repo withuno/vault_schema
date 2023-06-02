@@ -1,0 +1,72 @@
+{
+	"idCardValue": "SBr95SOWftis4FL8p1Y2eZZo3+5V9XWh+3ipsU8J0xY=",
+	"vaultSchemaMinor": 0,
+	"vaultSchemaMajor": 7,
+	"uuid": "e7d0e72f-4aee-4abd-92b6-a14934792776",
+	"email": "chris+624@uno.app",
+	"vault": [],
+	"manualItems": [
+		{
+			"name": "asdasd",
+			"url": "gngmememhijbokakblbhgfhagjdjcfjo",
+			"username": "asdasd",
+			"password": "asdasdsd",
+			"notes": "",
+			"id": "59d7753b-cda7-4086-b144-2d4b98f718a8",
+			"relatedItems": [],
+			"ssoProvider": [],
+			"matching_hosts": [
+				"gngmememhijbokakblbhgfhagjdjcfjo"
+			]
+		}
+	],
+	"contacts": [],
+	"confidants": [],
+	"oldPasswords": [],
+	"privateKeys": [
+		{
+			"key": "key",
+			"password": "password",
+			"walletAddresses": [
+				"01231231"
+			],
+			"name": "title2",
+			"notes": "12313123123123",
+			"url": "13123123",
+			"id": "a3a1af31-bbfa-46ec-b124-f2cd57116b6a",
+			"schema_type": "private_key"
+		}
+	],
+	"notes": [
+		{
+			"title": "asdasdas",
+			"notes": "asdasdasd",
+			"id": "9a7737af-9732-41ed-96e8-412b19d7def1",
+			"schema_type": "secure_note"
+		}
+	],
+	"creditCards": [
+		{
+			"type": "unknown",
+			"name": "123123312123asdasd",
+			"holder": "asdads",
+			"number": "1234123441231231",
+			"expiration": "0930",
+			"cvv": "111",
+			"id": "fd77749f-ec6f-456e-bdcf-2eaedeeeccff",
+			"schema_type": "credit_card"
+		}
+	],
+	"addresses": [
+		{
+			"line1": "123",
+			"line2": "asdads",
+			"city": "adsads",
+			"state": "PA",
+			"zip": "10001",
+			"country": "US",
+			"id": "efb3c1b9-f79b-4b07-a5cd-00c6ed80f638",
+			"schema_type": "address"
+		}
+	]
+}
