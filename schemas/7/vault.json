@@ -1,5 +1,4 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
   "$id": "https://uno.app/schemas/7/vault.json",
   "title": "Vault",
   "description": "Uno Vault",
@@ -10,7 +9,8 @@
     "vaultSchemaMajor": { "type": "integer" },
     "vaultSchemaMinor": { "type": "integer" },
     "uuid": {
-      "type": "string"
+      "type": "string",
+      "format": "uuid"
     },
     "email": {
       "type": "string"
@@ -112,7 +112,8 @@
         "phoneNumber": { "type": "string" },
         "state": { "enum": ["denied", "error", "pending", "protecting", "recovery", "removing", "owner", "readonly"] },
         "id": { 
-          "type": "string"
+          "type": "string",
+          "format": "uuid"
         },
         "share": { "type": "string" },
         "signingKey": { "type": "string" },
@@ -137,7 +138,8 @@
       "additionalProperties": false,
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "format": "uuid"
         },
         "clientId": { "type": "string" },
         "refreshToken": { "type": "string" }
@@ -149,7 +151,8 @@
       "additionalProperties": false,
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "format": "uuid"
         },
         "title": { "type": "string" },
         "notes": { "type": "string" }
@@ -161,7 +164,8 @@
       "additionalProperties": false,
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "format": "uuid"
         },
         "line1": { "type": "string" },
         "line2": { "type": "string" },
@@ -177,7 +181,8 @@
       "additionalProperties": false,
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "format": "uuid"
         },
         "type": { "type": "string" },
         "name": { "type": "string" },
@@ -193,7 +198,8 @@
           "maxLength": 4
         },
         "addressUUID": {
-          "type": "string"
+          "type": "string",
+          "format": "uuid"
         }
       },
       "required": ["id", "holder", "number", "expiration"]
@@ -203,7 +209,8 @@
       "additionalProperties": false,
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "format": "uuid"
         },
         "seed": { "type": "string" },
         "ownerPublicSigningKey": { "type": "string" }
@@ -224,7 +231,8 @@
         "notes": { "type": "string" },
         "url": { "type": "string" },
         "id": {
-          "type": "string"
+          "type": "string",
+          "format": "uuid"
         }
       },
       "required": ["name", "key", "id"]
@@ -252,7 +260,8 @@
       "additionalProperties": false,
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "format": "uuid"
         },
         "name": { "type": "string" },
         "username": { "type": "string" },
@@ -281,7 +290,8 @@
       "additionalProperties": false,
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "format": "uuid"
         },
         "matching_hosts": { "type": "array", "items": { "type": "string" } },
         "name": { "type": "string" },

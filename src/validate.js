@@ -1,4 +1,5 @@
 const Ajv = require("ajv");
+const formats = require("ajv-formats");
 const fs = require("fs");
 
 (function() {
@@ -25,6 +26,7 @@ const fs = require("fs");
   const schema = JSON.parse(schemaBuf);
 
   const ajv = new Ajv();
+  formats(ajv);
   const validate = ajv.compile(schema);
 
   let data;
