@@ -94,7 +94,6 @@
     "wiringDetails": { "type": "array" }
   },
   "required": [
-    "idCardValue",
     "vaultSchemaMajor",
     "uuid",
     "contacts",

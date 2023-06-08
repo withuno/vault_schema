@@ -9,7 +9,7 @@
  * Uno Vault
  */
 export interface Vault {
-  idCardValue: string;
+  idCardValue?: string;
   vaultSchemaMajor: number;
   vaultSchemaMinor?: number;
   uuid: string;
@@ -35,6 +35,7 @@ export interface Vault {
 }
 export interface ManualItem {
   id: string;
+  schema_type?: string;
   matching_hosts?: string[];
   name?: string;
   url?: string;
@@ -57,6 +58,7 @@ export interface RelatedItem {
 }
 export interface VaultItem {
   id: string;
+  schema_type?: string;
   name: string;
   username?: string;
   password?: string;
@@ -74,6 +76,7 @@ export interface PrivateKey {
   walletAddresses?: string[];
   notes?: string;
   url?: string;
+  schema_type?: string;
   id: string;
 }
 export interface Group {
@@ -98,6 +101,7 @@ export interface Contact {
 }
 export interface CreditCard {
   id: string;
+  schema_type?: string;
   type?: string;
   name?: string;
   holder: string;
@@ -108,6 +112,7 @@ export interface CreditCard {
 }
 export interface Address {
   id: string;
+  schema_type?: string;
   line1: string;
   line2?: string;
   city: string;
@@ -117,6 +122,7 @@ export interface Address {
 }
 export interface Note {
   id: string;
+  schema_type?: string;
   title: string;
   notes: string;
 }
