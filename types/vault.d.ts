@@ -49,8 +49,8 @@ export interface ManualItem {
 }
 export interface SsoProvider {
   default?: boolean;
-  provider: string;
-  username: string;
+  provider?: string;
+  username?: string;
 }
 export interface RelatedItem {
   password?: string;

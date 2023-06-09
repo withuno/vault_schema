@@ -256,8 +256,7 @@
         "default": { "type": "boolean" },
         "provider": { "type": "string" },
         "username": { "type": "string" }
-      },
-      "required": ["provider", "username"]
+      }
     },
     "vaultItem": {
       "type": "object",
