@@ -48,7 +48,7 @@ export interface ManualItem {
   relatedItems?: RelatedItem[];
 }
 export interface SsoProvider {
-  default: boolean;
+  default?: boolean;
   provider: string;
   username: string;
 }
