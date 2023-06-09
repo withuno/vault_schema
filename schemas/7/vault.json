@@ -257,7 +257,7 @@
         "provider": { "type": "string" },
         "username": { "type": "string" }
       },
-      "required": ["default", "provider", "username"]
+      "required": ["provider", "username"]
     },
     "vaultItem": {
       "type": "object",
