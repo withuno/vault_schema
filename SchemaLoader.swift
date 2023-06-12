@@ -3,8 +3,11 @@ import Foundation
 public struct SchemaLoader {
     private static var schemas = [Int: [String: Any]]()
 
+    private static let queue = DispatchQueue(label: "SchemaLoader", qos: .userInteractive)
+
     public static func schema(for version: Int) -> [String: Any]? {
-        if let schema = schemas[version] {
+        let schema = queue.sync { schemas[version] }
+        if let schema {
             return schema
         }
 
@@ -29,7 +32,7 @@ public struct SchemaLoader {
         do {
             let data = try Data(contentsOf: url)
             let schema = try JSONSerialization.jsonObject(with: data) as? [String: Any]
-            schemas[version] = schema
+            queue.sync { schemas[version] = schema }
             return schema
         } catch {
             print(error.localizedDescription)
