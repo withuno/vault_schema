@@ -19,6 +19,7 @@ export interface Vault {
   manualItems?: ManualItem[];
   vault: VaultItem[];
   privateKeys?: PrivateKey[];
+  joinedWaitlist?: boolean;
   groups?: Group[];
   contacts: Contact[];
   confidants: Contact[];
@@ -105,7 +106,7 @@ export interface CreditCard {
   type?: string;
   name?: string;
   holder: string;
-  number: string;
+  number?: string;
   expiration: string;
   cvv?: string;
   addressUUID?: string;
