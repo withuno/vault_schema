@@ -197,9 +197,7 @@
           "pattern": "^[0,1][0-9]{3}$"
         },
         "cvv": {
-          "type": "string",
-          "minLength": 3,
-          "maxLength": 4
+          "type": "string"
         },
         "addressUUID": {
           "type": "string",
