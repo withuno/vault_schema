@@ -253,7 +253,7 @@
       "additionalProperties": false,
       "properties": {
         "default": { "type": "boolean" },
-        "provider": { "type": "string" },
+        "provider": { "type": ["string", "null"] },
         "username": { "type": "string" }
       }
     },
