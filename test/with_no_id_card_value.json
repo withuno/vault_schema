@@ -1,0 +1,122 @@
+{
+	"uuid": "666CFC96-2826-4F83-998B-E704424E52CB",
+	"name": "Standard",
+	"vault": [],
+	"addresses": [],
+	"wiringDetails": [],
+	"manualItems": [
+		{
+			"username": "appledapple",
+			"password": "3798437y9f3y9fy83y38",
+			"id": "219B7A7A-727E-4014-B336-3ED86766E1CB",
+			"notes": "NICE OK",
+			"url": "Facebook",
+			"relatedItems": [
+				{
+					"password": "aplpeOK"
+				},
+				{
+					"password": "9798798789"
+				},
+				{
+					"password": "r68f68df86f8d86df8f68d"
+				},
+				{
+					"password": "g8dg34f874g3f8g348f"
+				},
+				{
+					"password": "fg9734gcf7r4bf79ey"
+				}
+			]
+		},
+		{
+			"username": "a@b.com",
+			"password": "hfoiehiofh3oihfoiw",
+			"id": "767ECC8E-C3AB-4F28-91EC-36B41DC1438B",
+			"notes": "OK",
+			"url": "twitter.com",
+			"relatedItems": []
+		},
+		{
+			"relatedItems": [],
+			"password": "bku/Bc/~z2GY^w <UnJ'Ji]d7+k;g6IV;GC[",
+			"id": "99031C44-8D22-4AFC-B95F-7B45E96CCA9F",
+			"notes": "OK",
+			"username": "a@b.com",
+			"name": "Facebook",
+			"url": "https://www.facebook.com"
+		},
+		{
+			"relatedItems": [
+				{
+					"password": "12345"
+				},
+				{
+					"password": "1234580890"
+				}
+			],
+			"password": "1234580890880",
+			"id": "234E3A0F-1FAA-423A-A58C-B8C56D947F35",
+			"notes": "OKII",
+			"username": "bleepyboo22",
+			"name": "Apple",
+			"url": "www.apple.com"
+		}
+	],
+	"refreshTokens": [],
+	"privateKeys": [
+		{
+			"password": "",
+			"id": "592D8A57-8ECA-4854-B82D-864938CF4FF0",
+			"notes": "",
+			"walletAddresses": [],
+			"key": "4EI7/mtejl7qxb2LA2QjAiajMkvO3Q70FPYKWkeedW0=",
+			"name": "TGR",
+			"url": ""
+		}
+	],
+	"notes": [],
+	"wifi": [],
+	"personas": [],
+	"travel": [],
+	"contacts": [],
+	"oldPasswords": [
+		"fakePWdropbox"
+	],
+	"confidants": [],
+	"friends": [
+		{
+			"phoneNumber": "789779798",
+			"id": "0AC34321-A485-4C4D-8D01-DCDE3FD9FFCA",
+			"fullName": "Bob Barker",
+			"oldShares": [],
+			"session": {
+				"seed": "ZWNgOCwfqYEfPg=="
+			},
+			"givenName": "Bob",
+			"state": "readonly",
+			"initials": "BB"
+		},
+		{
+			"phoneNumber": "89890878978",
+			"id": "D9DB1187-620B-465A-87FD-848D172B3D50",
+			"fullName": "Tiegr T",
+			"oldShares": [],
+			"session": {
+				"seed": "MvBwukQ8G0l7aw=="
+			},
+			"givenName": "Tiegr",
+			"state": "readonly",
+			"initials": "T "
+		}
+	],
+	"groups": [
+		{
+			"id": "1EE65F54-8A55-433B-8C85-9934781867E4",
+			"seed": "KL4Fa/kSqS0BxLqcb5rF0JJBN/dtOPWcdL/5X2IVutI=",
+			"ownerPublicSigningKey": "w20HP9B+qgBpByM5azkZU/ek44LsnDFVaA202MwEU1c="
+		}
+	],
+	"creditCards": [],
+	"vaultSchemaMajor": 7
+}
