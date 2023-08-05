@@ -299,7 +299,7 @@
         "matching_hosts": { "type": "array", "items": { "type": "string" } },
         "name": { "type": "string" },
         "url": { "type": "string" },
-        "username": { "type": "string" },
+        "username": { "type": ["string", "null"] },
         "password": { "type": "string" },
         "intendedPassword": { "type": "string" },
         "otpSeed": { "type": ["string", "null"] },
