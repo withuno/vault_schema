@@ -1,0 +1,348 @@
+{
+  "$id": "https://uno.app/schemas/7/vault.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Vault",
+  "description": "Uno Vault",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "idCardValue": { "type": "string" },
+    "vaultSchemaMajor": { "type": "integer" },
+    "vaultSchemaMinor": { "type": "integer" },
+    "uuid": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "email": {
+      "type": "string"
+    },
+    "validatedPhoneNumber": { "type": "string" },
+    "name": { "type": "string" },
+    "manualItems": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/manualItem"
+      }
+    },
+    "vault": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/vaultItem"
+      }
+    },
+    "privateKeys": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/privateKey"
+      }
+    },
+    "joinedWaitlist": { "type": "boolean" },
+    "groups": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/group"
+      }
+    },
+    "contacts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/contact"
+      }
+    },
+    "confidants": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/contact"
+      }
+    },
+    "friends": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/contact"
+      }
+    },
+    "oldPasswords": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "creditCards": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/creditCard"
+      }
+    },
+    "addresses": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/address"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/note"
+      }
+    },
+    "refreshTokens": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/refreshToken"
+      }
+    },
+    "personas": { "type": "array" },
+    "travel": { "type": "array" },
+    "wifi": { "type": "array" },
+    "wiringDetails": { "type": "array" }
+  },
+  "required": [
+    "vaultSchemaMajor",
+    "uuid",
+    "contacts",
+    "confidants",
+    "oldPasswords",
+    "vault"
+  ],
+  "$defs": {
+    "contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "givenName": { "type": "string" },
+        "fullName": { "type": "string" },
+        "initials": { "type": "string" },
+        "phoneNumber": { "type": "string" },
+        "state": { "enum": ["denied", "error", "pending", "protecting", "recovery", "removing", "owner", "readonly"] },
+        "id": { 
+          "type": "string",
+          "format": "uuid"
+        },
+        "share": { "type": "string" },
+        "signingKey": { "type": "string" },
+        "encryptionKey": { "type": "string" },
+        "oldShares": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "session": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "seed": { "type": "string" }
+          },
+          "required": ["seed"]
+        }
+      },
+      "required": ["givenName", "oldShares", "fullName", "initials", "phoneNumber", "id"]
+    },
+    "refreshToken": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "clientId": { "type": "string" },
+        "refreshToken": { "type": "string" }
+      },
+      "required": ["id", "clientId", "refreshToken"]
+    },
+    "note": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "schema_type": { "type": "string" },
+        "title": { "type": "string" },
+        "notes": { "type": "string" }
+      },
+      "required": ["id", "title", "notes"]
+    },
+    "address": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "schema_type": { "type": "string" },
+        "line1": { "type": "string" },
+        "line2": { "type": "string" },
+        "city": { "type": "string" },
+        "state": { "type": "string" },
+        "zip": { "type": "string" },
+        "country": { "type": "string" }
+      },
+      "required": ["id", "line1", "city", "state", "zip", "country"]
+    },
+    "creditCard": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "schema_type": { "type": "string" },
+        "type": { "type": "string" },
+        "name": { "type": "string" },
+        "holder": { "type": "string" },
+        "number": { "type": "string" },
+        "expiration": {
+          "type": "string",
+          "pattern": "^[0,1][0-9]{3}$"
+        },
+        "cvv": {
+          "type": "string"
+        },
+        "addressUUID": {
+          "type": "string",
+          "format": "uuid"
+        }
+      },
+      "required": ["id", "holder", "expiration"]
+    },
+    "group": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "seed": { "type": "string" },
+        "ownerPublicSigningKey": { "type": "string" }
+      },
+      "required": ["ownerPublicSigningKey", "seed", "id"]
+    },
+    "privateKey": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "key": { "type": "string" },
+        "password": { "type": "string" },
+        "walletAddresses": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "notes": { "type": "string" },
+        "url": { "type": "string" },
+        "schema_type": { "type": "string" },
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        }
+      },
+      "required": ["name", "key", "id"]
+    },
+    "relatedItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "password": { "type": "string" },
+        "otpSeed": { "type": "string" }
+      }
+    },
+    "ssoProvider": {
+      "type": "object",
+      "properties": {
+        "default": { "type": "boolean" },
+        "provider": { "type": ["string", "null"] },
+        "username": { "type": "string" }
+      }
+    },
+    "passkey": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "relyingParty": { "type": "string" },
+        "rawKey": { "type": ??? },
+        "user": { "type": "string" }
+      }
+    },
+    "vaultItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "schema_type": { "type": "string" },
+        "name": { "type": "string" },
+        "username": { "type": "string" },
+        "password": { "type": "string" },
+        "intendedPassword": { "type": "string" },
+        "intendedOTPSeed": { "type": "string" },
+        "otpSeed": { "type": "string" },
+        "notes": { "type": "string" },
+        "relatedItems": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relatedItem"
+          }
+        },
+        "passkeys": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/passkey"
+          }
+        },
+        "ssoProvider": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ssoProvider"
+          }
+        }
+      },
+      "required": ["id", "name"]
+    },
+    "manualItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "schema_type": { "type": "string" },
+        "matching_hosts": { "type": "array", "items": { "type": "string" } },
+        "name": { "type": "string" },
+        "url": { "type": "string" },
+        "username": { "type": ["string", "null"] },
+        "password": { "type": ["string", "null"] },
+        "intendedPassword": { "type": "string" },
+        "otpSeed": { "type": ["string", "null"] },
+        "notes": { "type": "string" },
+        "ssoProvider": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ssoProvider"
+          }
+        },
+        "passkeys": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/passkey"
+          }
+        },
+        "relatedItems": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relatedItem"
+          }
+        }
+      },
+      "required": ["id"]
+    }
+  }
+}
