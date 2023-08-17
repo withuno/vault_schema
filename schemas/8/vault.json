@@ -265,9 +265,11 @@
           "format": "uuid"
         },
         "relyingParty": { "type": "string" },
-        "rawKey": { "type": ??? },
-        "user": { "type": "string" }
-      }
+        "rawKey": { "type": "array", "items": { "type": "integer" } },
+        "userName": { "type": "string" },
+        "userHandle": { "type": "string" }
+      },
+      "required": ["id", "relyingParty", "rawKey", "userHandle"]
     },
     "vaultItem": {
       "type": "object",
