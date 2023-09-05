@@ -269,7 +269,7 @@
         "userName": { "type": "string" },
         "userHandle": { "type": "string" }
       },
-      "required": ["id", "relyingParty", "rawKey", "userHandle"]
+      "required": ["id", "relyingParty", "rawKey", "userHandle", "userName"]
     },
     "vaultItem": {
       "type": "object",
